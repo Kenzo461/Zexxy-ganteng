@@ -54,7 +54,8 @@ const GoStumble = (auth) => new Promise((resolve, reject) => {
             const crown = data.User.Crowns;
             
             console.log(gradient('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet')(`\r[ ${moment().format('HH:mm:ss')} ] Trophy : ${trophy} | Crown : ${crown}`));
-            
+            await sleep(0);
+
         } else if (result == 'BANNED') {
             console.log(gradient('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet')(`\r[ ${moment().format('HH:mm:ss')} ] 🌈Akun terkena Banned ! 🏳️‍🌈`));
             break;
