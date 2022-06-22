@@ -4,6 +4,11 @@ const chalk = require('chalk');
 const gradient = require('gradient-string') 
 const rs = require('readline-sync');
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 const GoStumble = (auth) => new Promise((resolve, reject) => {
 
     fetch('http://kitkabackend.eastus.cloudapp.azure.com:5010/round/finishv2/3', {
